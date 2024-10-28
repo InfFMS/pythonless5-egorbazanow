@@ -6,3 +6,18 @@
 # 4.YES, если список содержит трехзначное число, состоящее из одинаковых цифр
 # NO в противном случае;
 # 5.список с удаленными первым и последним элементами.
+from random import randint
+N = int(input())
+A = [ randint(1, 1000)  for i in range(N)]
+print(A)
+print(A[N-1])
+print(A[::-1])
+k = 0
+for i in range(0, N):
+    if 99<A[i]<1000 and A[i]%10 == A[i] %100 // 10 == A[i]//100:
+        k+=1
+if k>0:
+    print('YES')
+else:
+    print('NO')
+print(A[1: -1])
