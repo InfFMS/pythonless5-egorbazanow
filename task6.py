@@ -4,3 +4,11 @@
 # Пример: ввод N = 6
 # [1,2,3,4,5,6]
 # Вывод: [3,2,1,6,5,4]
+import random
+N = int(input())
+A = [random.randint(0, 100) for l in range(N)]
+print(A)
+mid = N // 2
+A[:mid] = A[:mid][::-1]
+A[mid:] = A[mid:][::-1]
+print(A)
