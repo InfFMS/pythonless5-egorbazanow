@@ -3,3 +3,15 @@
 # Сымитруем данные списком длины N со случайными числами в диапазоне от 0 до 1000
 # Удалите из этого списка все значения, которые на 30 % отличаются
 # от среднего значения списка
+from random import randint
+N = int(input())
+A = [ randint(1, 1000)  for l in range(N)]
+s = 0
+print(A)
+for i in range (0,N):
+    s = s + A[i]
+    i+=1
+s = s/N
+print('Среднее значение', s)
+fa = [x for x in A if abs(x - s) <= 0.3 * s]
+print(fa)

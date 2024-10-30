@@ -7,3 +7,22 @@
 # [1, 2, 3, 2, 5, 10]
 # Вывод:
 # значение:2 индексы 1 и 3
+import random
+N = int(input())
+A = [random.randint(0, 100) for l in range(N)]
+print(A)
+d = set()
+for i in range(N):
+  for j in range(i + 1, N):
+    if A[i] == A[j] and A[i] not in d:
+      d.add(A[i])
+      print(f"Число {A[i]} повторяется на индексах {i} и {j}")
+if not d:
+  print("В массиве нет повторяющихся элементов.")
+
+
+
+
+
+
+
